@@ -51,6 +51,10 @@ namespace SimpleException
                     //We need to call the HelpLink property, thus we need to create a local variable before throwing the Exception object.
                     Exception ex = new Exception($"{PetName} has overheated!");
                     ex.HelpLink = "http://www.CarsRUs.com";
+
+                    // Stuff in custom data regarding the error.
+                    ex.Data.Add("TimeStamp", $"The car exploded at {DateTime.Now}");
+                    ex.Data.Add("Cause", "You have a lead foot");
                     throw ex;
                 }
                 else
