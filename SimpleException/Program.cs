@@ -30,6 +30,7 @@ namespace SimpleException
                 Console.WriteLine("Message: {0}:", e.Message);
                 Console.WriteLine("Source: {0}", e.Source);
                 Console.WriteLine("Stack: {0}", e.StackTrace);
+                Console.WriteLine("Help Link: {0}", e.HelpLink);
             }
 
             // The error has been handled, processing continues with the next statement.
