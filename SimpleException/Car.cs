@@ -45,9 +45,11 @@ namespace SimpleException
                 CurrentSpeed += delta;
                 if (CurrentSpeed > MaxSpeed)
                 {
-                    Console.WriteLine("{0} has overheated!", PetName);
-                    CurrentSpeed = 0;
                     carIsDead = true;
+                    CurrentSpeed = 0;
+
+                    // Use the "throw" keyword to raise an exception.
+                    throw new Exception($"{PetName} has overheated");
                 }
                 else
                     Console.WriteLine("=> CurrentSpeed = {0}", CurrentSpeed);
