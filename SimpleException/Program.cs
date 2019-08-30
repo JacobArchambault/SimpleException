@@ -29,6 +29,7 @@ namespace SimpleException
                 Console.WriteLine("Method: {0}:", e.TargetSite);
                 Console.WriteLine("Message: {0}:", e.Message);
                 Console.WriteLine("Source: {0}", e.Source);
+                Console.WriteLine("Stack: {0}", e.StackTrace);
             }
 
             // The error has been handled, processing continues with the next statement.
